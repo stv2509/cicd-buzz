@@ -1,7 +1,10 @@
 language: python
 python:
-  - "3.6"
+- '3.6'
 script:
-  - python -m pytest -v
+- python -m pytest -v
 after_success:
-  - sh .travis/deploy_dockerhub.sh
+- sh .travis/deploy_dockerhub.sh
+notifications:
+  slack:
+    secure: DpcoaHoOFWlMrC7qoLTXIUy+DLyAXjWpO9rax89b7MDIs7f9k6GQ8JAzsd0BkRTK3yDqXqbjmhdujXihDeTD3B/iko57fJHGfSBMJJqDuQDYkyEUaWazYZqAsh7Wo0Z/zhVl/yheLTAr2LH0EDWos0mGQePVuWwkty2zBrP59/cAfp3dtdJhQaTx+7okqw634bQwlfYqSL6I1ZOZE4+60M991mi6y7Et3Z8bCLWD6UHxnyCjLWhsWS2LMUyFWvZJ3yZeozZJOYXhz3tO6B4DUlIyR65f9azO4tEottaYvyW6UG3tiL67wk/+Z6rnBsLWhATtbt3e7zdXTRzSgH80A/s2eqTtSZ84XjNgd0SjyAvmExX169ePkhUxHVzrXJCNkMcSyFIUUIJY0bOibslpnaTdpY4FUKsEVt41v1j9DiYwJp50E+UfE7PMG7X52Dj2kOafSjlj1O4SG7rilPepF/4QRB0/e3Igsejy5mPj1vjMCkS/hGyyEpoo/yiLe4JbV7TqYzhTSf1P4P3xn4P8oMGg8Jov50YqEJxyM+x5yJGaZkie7DEVgehTNYwslF61SOrL2VbekqVnC42fHuplj02g5FyXSvgDcHEvBgjqqUsGcrV/ys8tvODOeO1ddFigiMhCxFEUMSo4hz9wJcdkizZHRXZ8nzRt83mitkAYiQU=
